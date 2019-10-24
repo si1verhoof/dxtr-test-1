@@ -19,6 +19,6 @@
 		<sliceSourceBounds  width="20.9" height="21" x="295" y="386" bottomLeftOrigin="true"></sliceSourceBounds>
 	</sfw>
 </metadata>
-<path fill="#FFFFFF" d="M0,10.5C0,16.3,4.7,21,10.5,21s10.5-4.7,10.5-10.5S16.3,0,10.5,0C4.7,0,0,4.7,0,10.5z M7,10.4l3.8-4.6
+<path fill="rgba(255, 255, 255, 0.15)" d="M0,10.5C0,16.3,4.7,21,10.5,21s10.5-4.7,10.5-10.5S16.3,0,10.5,0C4.7,0,0,4.7,0,10.5z M7,10.4l3.8-4.6
 	l1.9,0.3l-3.6,4.4l3.5,4.3L10.8,15L7,10.4z"/>
 </svg>

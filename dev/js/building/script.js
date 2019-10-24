@@ -8,9 +8,7 @@ import {
 import Index from './modules/index';
 import Popup from './modules/popup';
 import Forms from './modules/forms';
-// import Burger from './modules/burger';
-// import Contacts from './modules/contacts';
-// import Sticky from './modules/sticky';
+import Carousel from './modules/carousel';
 
 document.addEventListener('DOMContentLoaded', () => {
   // const burger = new Burger();
@@ -28,27 +26,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const forms = new Forms();
   }
 
-  // if (document.body.classList.contains('index')) {
-  //   const index = new Index(30);
-  //   index.preload();
-  // }
-
-  // if (document.querySelector('.js-contacts-map')) {
-  //   const contacts = new Contacts('contacts-map');
-  //   contacts.init();
-  // }
-
-  // if (document.querySelector('.js-sticky')) {
-  //   Sticky(20, 0);
-  // }
-
-  // if (document.querySelectorAll('.js-shave').length) {
-  //   document.querySelectorAll('.js-shave').forEach((sh) => {
-  //     shave(sh, sh.getAttribute('data-height'));
-  //   });
-  // }}
+  //if (qs('.js-slider')) {
+  //  const carousel = new Carousel('.swiper-container');
+  //}
 
   // resize and scroll
   resizeWatcher();
   eventsDispatcher();
+});
+
+
+let mySwiper = new Swiper ('.swiper-container', {
+  // Optional parameters
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+})
+
+let elem = document.querySelector('.cards');
+let msnry = new Masonry( elem, {
+  // options
+  itemSelector: '.cards__item',
+  columnWidth: 0
 });

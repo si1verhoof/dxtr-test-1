@@ -1,11 +1,21 @@
 .breadcrumbs
-  color black
-  mb 15px
+  color $fgrey
+  font-family $fps
+  mb 22px
+  mt 63px
   &__href
     color inherit
-    fontify 14px 400 18px
+    fontify 12px 400 18px
     border-bottom 1px solid
     transition .7s border
+    mr 22px
+    text-transform uppercase
+    text-decoration none
+    border-color transparent
+    &_active 
+      font-weight 700
+      color $fdarkgrey
+      border-color $fdarkgrey
     &:not([href])
       border-color transparent
     &:hover
