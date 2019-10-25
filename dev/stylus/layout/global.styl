@@ -15,3 +15,47 @@ main .wrapper {
   display: flex;
   flex-direction: column;
 }
+
+@media (max-width: 1366px) {
+  .wrapper {
+    padding: 0;
+    width: 1256px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .wrapper {
+    width: 960px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .wrapper {
+    width: 640px;
+  }
+}
+
+@media (max-width: 660px) {
+  .wrapper {
+    width: 400px;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    width: 320px;
+  }
+
+  body {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+  }
+
+  body::-webkit-scrollbar { /* WebKit */
+      width: 0;
+      height: 0;
+  }
+}

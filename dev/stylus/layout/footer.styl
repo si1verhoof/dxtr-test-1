@@ -9,10 +9,27 @@
 
   &__dev
     display flex
-    flex-drection row
+    flex-direction row
+    font-family $fps
+    align-items center
+
+  &__text 
+    fontify 14px 400 17px
+    color $ffadedgrey
+    span 
+      color $fsaturatedgrey
 
   &__copyright
     margin auto 0
     fontify 16px 400 17px
     font-family $os
 
+  &__icon 
+    fill $ffadedgrey
+    ml 17px
+
+@media (max-width: 320px) {
+  .footer__icon {
+    display none
+  }
+}

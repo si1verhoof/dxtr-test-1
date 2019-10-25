@@ -164,7 +164,7 @@ button {
 }
 @font-face {
   font-family: 'NewBaskervilleC';
-  src: url("fonts/NewBaskervilleC.woff2") format('woff2'), url("fonts/NewBaskervilleC.woff") format('woff');
+  src: url("fonts/NewBaskervilleC.woff2") format('woff2'), url("fonts/NewBaskervilleC.woff") format('woff'), url("fonts/NewBaskervilleC.ttf") format('truetype');
   font-weight: 400;
   font-style: normal;
 }
@@ -571,22 +571,16 @@ button {
 .swiper-container-rtl .swiper-button-next {
   right: 54px;
 }
-@media (max-width: 1050px) {
-  .swiper-button-prev,
-  .swiper-container-rtl .swiper-button-next {
-    left: 0;
-  }
-}
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
   right: 19px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
-@media (max-width: 1050px) {
+@media (max-width: 320px) {
   .swiper-button-next,
-  .swiper-container-rtl .swiper-button-prev {
-    right: 0;
+  .swiper-button-prev {
+    display: none;
   }
 }
 html:not(.touchevents) .swiper-button-prev:hover,
@@ -3533,6 +3527,44 @@ main .wrapper {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+@media (max-width: 1366px) {
+  .wrapper {
+    padding: 0;
+    width: 1256px;
+    padding: 0;
+  }
+}
+@media (max-width: 1300px) {
+  .wrapper {
+    width: 960px;
+    padding: 0;
+  }
+}
+@media (max-width: 960px) {
+  .wrapper {
+    width: 640px;
+  }
+}
+@media (max-width: 660px) {
+  .wrapper {
+    width: 400px;
+  }
+}
+@media (max-width: 320px) {
+  .wrapper {
+    width: 320px;
+  }
+  body {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+  body::-webkit-scrollbar {
+/* WebKit */
+    width: 0;
+    height: 0;
+  }
+}
 .btn {
   position: relative;
   z-index: 1;
@@ -3603,11 +3635,17 @@ main .wrapper {
   font-family: "PT Sans";
   text-transform: lowercase;
 }
+@media (max-width: 320px) {
+  .header .wrapper {
+    padding-left: 10px;
+  }
+}
 .cards {
   width: 1302px;
   height: 880px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  margin-right: -10px;
 }
 .cards__item_cuba .swiper-slide {
   background-image: url("../../img/cuba.jpg");
@@ -3708,6 +3746,37 @@ main .wrapper {
   margin-top: 30%;
   font-family: "NewBaskervilleC";
 }
+@media (max-width: 1300px) {
+  .cards {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 960px) {
+  .cards {
+    width: 640px;
+  }
+}
+@media (max-width: 660px) {
+  .cards {
+    width: 320px;
+    margin-right: auto;
+  }
+  .cards__item_preview {
+    width: 300px;
+    height: 420px;
+    background-position-x: center;
+  }
+}
+@media (max-width: 320px) {
+  .cards {
+    width: 320px;
+  }
+  .cards__item {
+    margin-right: 0;
+    width: 320px;
+  }
+}
 .footer {
   background-color: #282a2d;
   color: #fff;
@@ -3725,7 +3794,23 @@ main .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-drection: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  font-family: "PT Sans";
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.footer__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #6b7076;
+}
+.footer__text span {
+  color: #b5b9be;
 }
 .footer__copyright {
   margin: auto 0;
@@ -3733,6 +3818,15 @@ main .wrapper {
   font-weight: 400;
   line-height: 17px;
   font-family: "NewBaskervilleC";
+}
+.footer__icon {
+  fill: #6b7076;
+  margin-left: 17px;
+}
+@media (max-width: 320px) {
+  .footer__icon {
+    display: none;
+  }
 }
 .hidden-block {
   height: 0;
@@ -4089,6 +4183,25 @@ div[class^="table-scroller"] {
 }
 .breadcrumbs + h1:not([class]) {
   margin-top: 0;
+}
+@media (max-width: 660px) {
+  .breadcrumbs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 30px auto;
+    width: 320px;
+    padding-left: 14px;
+  }
+  .breadcrumbs__href {
+    margin-right: 5px;
+  }
+  .breadcrumbs__href:last-child {
+    margin-right: 0;
+  }
 }
 .pagination {
   display: -webkit-box;

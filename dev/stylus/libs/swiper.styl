@@ -219,20 +219,16 @@
 
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
   right: 54px;
-
-  @media $desktopTablet {
-    l: 0;
-  }
 }
 
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
   right: 19px;
   transform: scaleX(-1);
-
-  @media $desktopTablet {
-    r: 0;
-  }
 }
+
+@media (max-width 320px)
+  .swiper-button-next, .swiper-button-prev
+    display none
 
 html:not(.touchevents) .swiper-button-prev:hover, html:not(.touchevents) .swiper-button-next:hover {
   background-color: alpha(white, 0.25);
