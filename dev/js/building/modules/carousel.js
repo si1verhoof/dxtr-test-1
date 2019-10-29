@@ -1,23 +1,23 @@
+import { qs } from './helpers';
+
 export default class Carousel {
-  constructor(galleryEl, thumbsEl) {
-    this.galleryEl = galleryEl;
-    this.thumbsEl = thumbsEl;
+  constructor(galleryClass) {
+    this.galleryClass = galleryClass;
+    this.galleryEl = qs(`${this.galleryClass} .swiper-slide`);
 
     this.init();
   }
 
   init() {
-    asAll(this.galleryEl).forEach((gal) => {
-      let galleryThumbs = new Swiper(gal, {
-        loop: true,
+    const galleryCarousel = new Swiper(this.galleryClass, {
+      loop: true,
 
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }
-      })
-    })
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
   }
 
 }

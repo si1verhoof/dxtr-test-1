@@ -35,21 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
   eventsDispatcher();
 });
 
+if (qs('.swiper-container')) {
+  let mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    loop: true,
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  })
+}
 
-let mySwiper = new Swiper ('.swiper-container', {
-  // Optional parameters
-  loop: true,
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  }
-})
-
-let elem = document.querySelector('.cards');
-let msnry = new Masonry( elem, {
-  // options
-  itemSelector: '.cards__item',
-  columnWidth: 0
-});
+if (qs('.cards')) {
+  let elem = qs('.cards');
+  let msnry = new Masonry( elem, {
+    // options
+    itemSelector: '.cards__item',
+    columnWidth: 0
+  });
+}

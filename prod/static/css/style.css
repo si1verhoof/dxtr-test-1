@@ -3556,11 +3556,10 @@ main .wrapper {
   }
   body {
     overflow-y: scroll;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
+    scrollbar-width: none /* Firefox */;
+    -ms-overflow-style: none /* IE 10+ */;
   }
-  body::-webkit-scrollbar {
-/* WebKit */
+  body-webkit-scrollbar {
     width: 0;
     height: 0;
   }
@@ -3646,57 +3645,13 @@ main .wrapper {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-right: -10px;
+  margin-bottom: 80px;
 }
-.cards__item_cuba .swiper-slide {
-  background-image: url("../../img/cuba.jpg");
-  background-size: cover;
-}
-.cards__item_russia .swiper-slide {
-  background-image: url("../../img/russia.jpg");
+.cards__item {
   background-size: cover;
 }
 .cards__item_preview {
   background-image: url("../../img/preview.jpg");
-  background-size: cover;
-}
-.cards__item_england .swiper-slide {
-  background-image: url("../../img/england.jpg");
-  background-size: cover;
-}
-.cards__item_norway .swiper-slide {
-  background-image: url("../../img/norway.jpg");
-  background-size: cover;
-}
-.cards__item_switzerland .swiper-slide {
-  background-image: url("../../img/switzerland.jpg");
-  background-size: cover;
-}
-.cards__item_china .swiper-slide {
-  background-image: url("../../img/china.jpg");
-  background-size: cover;
-}
-.cards__item_australia .swiper-slide {
-  background-image: url("../../img/australia.jpg");
-  background-size: cover;
-}
-.cards__item_india .swiper-slide {
-  background-image: url("../../img/india.jpg");
-  background-size: cover;
-}
-.cards__item_germany .swiper-slide {
-  background-image: url("../../img/germany.jpg");
-  background-size: cover;
-}
-.cards__item_japan .swiper-slide {
-  background-image: url("../../img/japan.jpg");
-  background-size: cover;
-}
-.cards__item_finland .swiper-slide {
-  background-image: url("../../img/finland.jpg");
-  background-size: cover;
-}
-.cards__item_newZealand .swiper-slide {
-  background-image: url("../../img/newzealand.jpg");
   background-size: cover;
 }
 .cards .swiper-slide {
@@ -3771,6 +3726,7 @@ main .wrapper {
 @media (max-width: 320px) {
   .cards {
     width: 320px;
+    margin-bottom: 0;
   }
   .cards__item {
     margin-right: 0;
@@ -3812,7 +3768,7 @@ main .wrapper {
 .footer__text span {
   color: #b5b9be;
 }
-.footer__copyright {
+.footer__years {
   margin: auto 0;
   font-size: 16px;
   font-weight: 400;
