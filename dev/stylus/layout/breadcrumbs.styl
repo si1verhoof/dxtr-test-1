@@ -1,61 +1,61 @@
-.breadcrumbs {
-  color: $fgrey;
-  font-family: $fps;
-  mb: 22px;
-  mt: 63px;
+.breadcrumbs 
+  color $fgrey
+  font-family $fps
+  mb 22px
+  mt 63px
 
-  &__href {
-    color: inherit;
-    fontify: 12px 400 18px;
-    border-bottom: 1px solid;
-    transition: 0.7s border;
-    mr: 22px;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-color: transparent;
+  &__href 
+    color inherit
+    fontify 12px 400 18px
+    border-bottom 1px solid
+    transition 0.7s border
+    mr 22px
+    text-transform uppercase
+    text-decoration none
+    border-color transparent
+    cursor pointer
 
-    &_active {
-      font-weight: 700;
-      color: $fdarkgrey;
-      border-color: $fdarkgrey;
-    }
+    &_active
+      font-weight 700
+      color $fdarkgrey
+      border-color $fdarkgrey
+    
 
-    &:not([href]) {
-      border-color: transparent;
-    }
+    &not([href]) 
+      border-color transparent
+    
 
-    &:hover {
-      border-color: transparent;
-    }
-  }
+    &hover 
+      border-color transparent
+    
+  
 
-  &__delim {
-    display: inline-block;
-    vertical-align: top;
-    margin: 9px 9px 11px;
-    size: 15px 2px;
-    bgc: $red;
-  }
+  &__delim 
+    display inline-block
+    vertical-align top
+    margin 9px 9px 11px
+    size 15px 2px
+    bgc $red
+  
 
-  & + h1:not([class]) {
-    mt: 0;
-  }
-}
+  & + h1not([class]) 
+    mt 0
+  
 
-@media (max-width: 660px) {
-  .breadcrumbs {
-    display: flex;
-    align-items: center;
-    margin: 30px auto;
-    width: 320px;
-    padding-left: 14px;
 
-    &__href {
-      mr: 5px;
+@media (max-width 660px) 
+  .breadcrumbs 
+    display flex
+    align-items center
+    margin 30px auto
+    width 320px
+    padding-left 14px
 
-      &:last-child {
+    &__href 
+      mr 5px
+
+      &last-child 
         mr 0
-      }
-    }
-  }
-}
+      
+    
+  
