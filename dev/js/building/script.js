@@ -62,12 +62,12 @@ if (qs('.cards')) {
 {
   filterSelection('all')
   function filterSelection(c) {
-    let filterItem = document.getElementsByClassName('filterDiv');
+    let filterItem = document.getElementsByClassName('cards__item');
     // Add the 'show' class (display:block) to the filtered elements,
     // and remove the 'show' class from the elements that are not selected
     for (let i = 0; i < filterItem.length; i++) {
-      addClass(filterItem[i], 'cards__item_inactive');
-      if (filterItem[i].className.indexOf(c) > -1) removeClass(filterItem[i], 'cards__item_inactive');
+      removeClass(filterItem[i], 'cards__item_inactive');
+      if (filterItem[i].className.indexOf(c) > -1) addClass(filterItem[i], 'cards__item_inactive');
     }
   }
 

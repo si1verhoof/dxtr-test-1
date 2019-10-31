@@ -53,10 +53,10 @@ html
 
         +b('section').breadcrumbs#breadcrumbs
           +e.BTN.href_active(onclick="filterSelection('all')") Все страны
-          +e.BTN.href(onclick="filterSelection('card__item_culture')") Культура
-          +e.BTN.href(onclick="filterSelection('card__item_extreme')") Экстрим
-          +e.BTN.href(onclick="filterSelection('card__item_atmosphere')") Атмосфера
-          +e.BTN.href(onclick="filterSelection('card__item_people')") Люди
+          +e.BTN.href(onclick="filterSelection('cards__item_culture')") Культура
+          +e.BTN.href(onclick="filterSelection('cards__item_extreme')") Экстрим
+          +e.BTN.href(onclick="filterSelection('cards__item_atmosphere')") Атмосфера
+          +e.BTN.href(onclick="filterSelection('cards__item_people')") Люди
         +b('section').cards
           +e.item_cuba._culture
             .swiper-container
